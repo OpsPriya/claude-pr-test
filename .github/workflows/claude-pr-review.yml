@@ -12,12 +12,6 @@ permissions:
 jobs:
   review:
     runs-on: ubuntu-latest
-
-    permissions:
-      contents: read
-      pull-requests: write
-      id-token: write
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -26,4 +20,4 @@ jobs:
         uses: anthropic/claude-code-review@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.GITHUB_TOKEN_PAT }}
