@@ -20,4 +20,4 @@ jobs:
         uses: anthropic/claude-code-review@v1
         with:
           anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
-          github_token: ${{ secrets.GITHUB_TOKEN_PAT }}
+          github_token: ${{ secrets.GITHUB_TOKEN_PATH }}
